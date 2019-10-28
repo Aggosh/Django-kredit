@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="base-str">
+    {% if notification is not None %}
+        <span class="review-notification">{{ notification }}</span>
+    {% endif %}
+    {% for review in reviews %}
+    <div class="review">
+        <p class="review-name"> {{ review.name }}</p>
+        <div class="main-review-text">
+            <span class="review-text"> {{ review.text }}</span>
+        </div>
+        <br>
+        <a href="{{ review.company_name }}"><p class="review-company-name"> {{ review.get_company_name_display }}</p></a>
+        <div class="review-rating">
+            <span class="stars" data-stars={{ review.company_rating }}>XXXXX</span>
+        </div>
+        <p class="review_time"> {{ review.time|date:"j.n.Y G:i" }}</p>
+    </div>
+    {% endfor %}
+    <form action="" method="post">
+        <div class="review-form">
+            <span class='review-form-email'>Email: {{ form.email }}</span>
+            <span class='review-form-name'>Имя: {{ form.name }}</span>
+            <span class='review-form-text'>{{ form.text }}</span>
+            <span class='review-form-company-name'>Ваше МФО {{ form.company_name }}</span>
+            <span class='review-form-company-rating'>Оценка {{ form.company_rating }}</span>
+            <input class='review-form-submit' type="submit" value="Отправить">
+        </div>
+        {% csrf_token %}
+    </form>
+</div>
+{% endblock %}
