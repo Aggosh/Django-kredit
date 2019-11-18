@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import Post, Advertising, Statistic, Review, Notification
+from .models import Compony, Advertising, Review, Notification
 
 
-@admin.register(Post)
+@admin.register(Compony)
 class PostAdmin(admin.ModelAdmin):
     pass
 
@@ -13,11 +13,6 @@ class PostAdmin(admin.ModelAdmin):
 
 
 @admin.register(Advertising)
-class PostAdmin(admin.ModelAdmin):
-    pass
-
-
-@admin.register(Statistic)
 class PostAdmin(admin.ModelAdmin):
     pass
 
