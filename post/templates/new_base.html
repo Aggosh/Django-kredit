@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Document</title>
+    <title>Kredi best</title>
     <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/><link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/new_base.css' %}">
@@ -16,72 +16,71 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- HEADER -->
-    <!-- ПЕРЕДЕЛАТЬ С COL -->
-    <header class="container-fluid">
-      <div class="col-lg-10 offset-lg-1 d-flex justify-content-between mb-3">
-        <div class="navbar-brand"><a class="brand" href="#">KREDI<a class="brand" href="#" style="color: #e67e22;">.BEST</a></a></div>
-        <div class="verticalLine nav-item p-2 bd-highlight"></div>
-        <div class="nav-item p-2 bd-highlight">
-          <div class="nav-counter" href="#"><p class="nav-counter-number">50 000</p><p class="nav-counter-text">человек уже взяли кредит</p></div>
-        </div>
-        <div class="nav-item p-2 bd-highlight">
-          <a class="nav-link" href="#">О нас</a>
-        </div>
-        <div class="nav-item p-2 bd-highlight">
-          <a class="nav-link nev-select" href="#">Блог</a>
-        </div>
-        <div class="nav-item p-2 bd-highlight">
-          <a class="nav-link" href="#">Контакты</a>
-        </div>
-        <div class="nav-item">
-          <a class="nav-link header-button button-animate" href="#" value="Оформить заявку"></a>
+    <nav class="navbar navbar-expand-lg navbar-light offset-xl-2 offset-lg-1 col-xl-8 col-md-12 offset-md-0 col-sm-12 offset-sm-0 col-xs-12 offset-xs-0 row">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-brand col"><div><a class="brand" href="#">KREDI<a class="brand-left" href="#" style="color: #e67e22;">.BEST</a></a></div></div>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <div class="verticalLine nav-item d-none d-xl-block col-1"></div>
+          <div class="nav-item col-xl-4 nav-number">
+            <div class="nav-counter nav-item" href="#">
+              <p class="nav-counter-number">50 000</p>
+              <p class="nav-counter-text">человек уже взяли кредит</p>
+            </div>
+          </div>
+          <div class="nav-item col-xl-2 col-lg-3 col-md-12 col-xs-12 col-sm-12">
+            <a class="nav-link" href="#">О нас</a>
+          </div>
+          <div class="nav-item col-xl-2 col-lg-2 col-md-12 col-xs-12 col-sm-12">
+            <a class="nav-link nev-select" href="#">Блог</a>
+          </div>
+          <div class="nav-item col-xl-2 col-lg-3 col-md-12 col-xs-12 col-sm-12" style="min-width:130px;">
+            <a class="nav-link" href="#">Контакты</a>
+          </div>
+          <div class="nav-item col-xl-4 col-lg-5 col-md-12 col-xs-12 col-sm-12">
+            <a class="nav-link header-button button-animate" href="#" value="Оформить заявку"></a>
+          </div>
         </div>
       </div>
-    </header>
+    </nav>
     <main>
       {% block content %}
-      <!-- TOP FIVE -->
-        <div class="top-five container-fluid">
-          <div class="col-lg-10 offset-lg-1">
-            <div class="row">
-              <div class="col-lg-2 horizontalline-left"></div>
-              <div class="col-lg-8 top-five-notification-text">
-                <p>Топ <a style="color: #e67e22;">5</a> компаний</p>
-              </div>
-              <div class="col-lg-2 horizontalline-right"></div>
-            </div>
-          </div>
-          <div style="margin-right: 0px; margin-left: 0px;" class="row">
-            <div class="col-lg-10 offset-lg-1 row">
-              {% for top_five_item in top_five %}
-                <div class="col top-five-item">
-                  <div>
-                    <a href="{{ top_five_item.ref_url }}" target="_blank">
-                    <img src="/media/{{ top_five_item.main_photo }}"></a>
-                    <span class="stars" data-stars={{ compony.raiting }}>XXXXX</span>
-                    <p>{{ top_five_item.reviews_count }} отзывов</p>
-                  </div>
+        <!-- TOP FIVE -->
+        <div class="container-fluid">
+          <div class="row offset-xl-2 col-xl-8 offset-lg-1 col-lg-10 col-md-12 offset-md-0">
+            <div class="col-xl-6 col-lg-6">
+              <div class="top-five">
+                <div class="col-xl-12 top-five-notification-text">
+                  <p>Топ <a style="color: #e67e22;">5</a> компаний</p>
                 </div>
-              {% endfor %}
+                <div style="margin-right: 0px; margin-left: 0px;" class="row">
+                    {% for top_five_item in top_five %}
+                      <div class="col top-five-item">
+                        <div>
+                          <a href="{{ top_five_item.ref_url }}" target="_blank">
+                          <img src="/media/{{ top_five_item.main_photo }}"></a>
+                          <span class="stars" data-stars={{ compony.raiting }}>XXXXX</span>
+                          <p>{{ top_five_item.reviews_count }} отзывов</p>
+                        </div>
+                      </div>
+                    {% endfor %}
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <!-- NOTIFICATION -->
-        <div class="notification container-fluid">
-          <div class="col-lg-10 offset-lg-1">
-            <div class="row">
-              <div class="col-lg-2 horizontalline-left"></div>
-              <div class="col-lg-8 notification-text"><p><a style="color: #e67e22;">Внимание!</a> Для 100% одобрения отправьте минимум 3 заявки</p><p>Больше заполненных заявок — выше шанс получить деньги</p>
+            <!-- NOTIFICATION -->
+            <div class="notification col-lg-5 offset-lg-1 col-xl-5 offset-xl-1">
+              <div class="notification-text"><p><a style="color: #e67e22;">Внимание!</a> Для 100% одобрения отправьте минимум 3 заявки</p><p>Больше заполненных заявок — выше шанс получить деньги</p>
               <p style="margin-top: 20px">Для оформления заявки необходимо перейти на сайт</p><p> подходящей кредитной организации, открываются в новом окне!</p></div>
-              <div class="col-lg-2 horizontalline-right"></div>
             </div>
           </div>
         </div>
         <!-- COMPONY -->
         <div class="compony-list container-fluid">
-          <div class="col-lg-8 offset-lg-2 row">
+          <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 row">
             {% for compony in componys %}
-              <div class="col-lg-3 compony">
+              <div class="col-xl-3 col-lg-4 compony">
                 <div class="compony-content">
                   <div class="compony-header">
                     <a href="{{ compony.ref_url }}"><img src="/media/{{ compony.main_photo }}"></a>
@@ -116,7 +115,7 @@
     </main>
     <!-- FOOTER -->
     <footer>
-      <div class="col-lg-4 offset-lg-4 row">
+      <div class="col-xl-4 offset-xl-4 col-lg-6 offset-lg-3 row">
         <a class="col" >Главная</a>
         <a class="col" >О нас</a>
         <a class="col" >Блог</a>

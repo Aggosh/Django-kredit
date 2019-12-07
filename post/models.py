@@ -16,7 +16,7 @@ class Compony(models.Model):
     position = models.IntegerField(default=0)
     reviews_count = models.IntegerField(default=50)
     main_photo = models.ImageField(
-        upload_to='Construction/static/roof/img',
+        upload_to='compony/img',
         height_field=None,
         width_field=None,
         max_length=100,
