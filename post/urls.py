@@ -1,12 +1,9 @@
-from django.contrib import admin
 from django.urls import path
 
-from .views import index, license, reviews, new
+from .views import license, new
 
 
 urlpatterns = [
-    path('', index),
+    path('', new),
     path('license/', license),
-    path('new/', new),
-    path('reviews/', reviews),
 ]

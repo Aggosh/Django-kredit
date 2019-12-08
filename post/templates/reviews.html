@@ -1,33 +1,49 @@
-{% extends 'base.html' %}
+{% extends 'new_base.html' %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/review.css' %}">
+{% endblock %}
+{% block select-review %}
+nev-select
+{% endblock %}
 {% block content %}
-<div class="base-str">
-    {% if notification is not None %}
-        <span class="review-notification">{{ notification }}</span>
-    {% endif %}
-    {% for review in reviews %}
-    <div class="review">
-        <p class="review-name"> {{ review.name }}</p>
-        <div class="main-review-text">
-            <span class="review-text"> {{ review.text }}</span>
+    <div class="container-fluid">
+        <div class="row offset-xl-2 col-xl-8 offset-lg-1 col-lg-10 col-md-12 offset-md-0">
+            <div class="review-title">
+                <h1>Отзывы</h1>
+            </div>
+            <div class="review">
+                {% for review in reviews %}
+                    <div class="review-item row">
+                        <div class="col-2">
+                            <p class="review-name">{{ review.name }}</p>
+                            <a href="{{ review.company_name.ref_url }}"><img src="/media/{{ review.company_name.main_photo }}"></a>
+                            <span class="stars" data-stars={{ review.company_rating }}>XXXXX</span>
+                        </div>
+                        <div class="col-10">
+                            <p class="review-text">{{ review.text }}</p>
+                        </div>
+                        <div class="col-12">
+                            <p class="review-time">{{ review.time|date:"j.n.Y" }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="offset-xl-3 col-xl-6 col-lg-8 offset-lg-2">
+                <div class="review-form">
+                    <form action="" method="post">
+                        <div class="row">
+                            <input class="review-form-email col-lg-5 col-xl-5" type="email" name="email" required placeholder="Почта">
+                            <input class="review-form-name offset-lg-2 col-lg-5 offset-xl-2 col-xl-5" type="text" name="name" required placeholder="Имя">
+                            <textarea class="review-form-text col-lg-12 col-xl-12" name="text" required id="id_text"></textarea>
+                            <span class='review-form-company-name col-lg-3 col-xl-3'>{{ form.company_name }}</span>
+                            <span class='review-form-company-rating col-lg-4 offset-lg-1 col-xl-4 offset-xl-1'><a>Оценка</a>{{ form.company_rating }}</span>
+                            <input class='review-form-submit col-lg-3 offset-lg-1 col-xl-3 offset-xl-1' type="submit" value="Отправить">
+                            {% csrf_token %}
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <br>
-        <a href="{{ review.company_name }}"><p class="review-company-name"> {{ review.get_company_name_display }}</p></a>
-        <div class="review-rating">
-            <span class="stars" data-stars={{ review.company_rating }}>XXXXX</span>
-        </div>
-        <p class="review_time"> {{ review.time|date:"j.n.Y G:i" }}</p>
     </div>
-    {% endfor %}
-    <form action="" method="post">
-        <div class="review-form">
-            <span class='review-form-email'>Email: {{ form.email }}</span>
-            <span class='review-form-name'>Имя: {{ form.name }}</span>
-            <span class='review-form-text'>{{ form.text }}</span>
-            <span class='review-form-company-name'>Ваше МФО {{ form.company_name }}</span>
-            <span class='review-form-company-rating'>Оценка {{ form.company_rating }}</span>
-            <input class='review-form-submit' type="submit" value="Отправить">
-        </div>
-        {% csrf_token %}
-    </form>
-</div>
 {% endblock %}

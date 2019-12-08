@@ -32,7 +32,7 @@ font-family: 'font7ac1c8f0b974a943aa67859c07f86bd2';
 }}
 
 @media (min-width: 992px) { 
-  main { margin-top: 120px; }
+  main { margin-top: 70px; }
   .notification { margin-top: 70px;}
   .nav-item-hovered:hover{
   color: #e67e22!important;
@@ -397,11 +397,16 @@ footer{
   line-height: 1.36;
   letter-spacing: normal;
   text-align: center;
-  color: #fbf9f8;
+  color: #fbf9f8!important;
 }
 
 footer a{
   margin-top: 20px;
+  color: #fbf9f8;
+}
+
+footer a:hover{
+  color: #e67e22;
 }
 
 footer p{
@@ -432,8 +437,7 @@ footer p{
 
     text-indent: -9999px;
 
-    background: url('http://www.itsalif.info/blogfiles/rating/star-rating.png') no-repeat;
-    background-color: red;
+    background: url('star-rating.png') no-repeat;
 }
 [class*='stars'][data-stars='5']
 {

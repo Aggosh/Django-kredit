@@ -1,5 +1,4 @@
 from django.db import models
-from datetime import datetime
 
 
 class Compony(models.Model):
@@ -25,8 +24,8 @@ class Compony(models.Model):
     )
 
     def __str__(self):
-        return 'Position %s Name: %s URL: %s' % (
-            self.position, self.title, self.ref_url
+        return '%s' % (
+            self.title
         )
 
 
@@ -58,30 +57,4 @@ class Notification(models.Model):
     def __str__(self):
         return '%s %s %s' % (
             self.position, self.text, self.company_nama
-        )
-
-
-class Review(models.Model):
-    rating = [(x, str(x)) for x in range(1, 6)]
-
-    email = models.EmailField(unique=True)
-    name = models.CharField(max_length=30)
-    text = models.TextField(max_length=4000)
-    company_nama = models.ForeignKey(
-        Compony,
-        on_delete=models.CASCADE,
-        default="",
-        blank=True,
-        null=True,
-    )
-    company_rating = models.IntegerField(choices=rating, default=5)
-    time = models.DateTimeField(default=datetime.now)
-    approved = models.BooleanField(default=False)
-
-    def __str__(self):
-        return '%s, %s, %s, %s' % (
-            self.approved,
-            self.email,
-            self.name,
-            self.company_nama
         )

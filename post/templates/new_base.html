@@ -14,6 +14,8 @@
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
     <script src="{% static 'js/new_base.js' %}"></script>
+    {% block head %}
+    {% endblock %}
   </head>
   <body>
     <!-- BOOTSTRAP -->
@@ -26,7 +28,7 @@
       aria-controls="navbarSupportedContent20" aria-expanded="false" aria-label="Toggle navigation">
       <div class="animated-icon1"><span></span><span></span><span></span></div>
       </button>
-      <div class="navbar-brand col"><div><a class="brand" href="#">KREDI<a class="brand-left" href="#" style="color: #e67e22;">.BEST</a></a></div></div>
+      <div class="navbar-brand col"><div><a class="brand" href="/">KREDI<a class="brand-left" href="/" style="color: #e67e22;">.BEST</a></a></div></div>
       <div class="collapse navbar-collapse col" style="padding-left:0px; padding-right:0px" id="navbarSupportedContent20">
         <div class="navbar-nav">
           <div class="verticalLine nav-item d-none d-xl-block col-1"></div>
@@ -37,13 +39,13 @@
             </div>
           </div>
           <div class="nav-item col-xl-2 col-lg-2 col-md-12 col-xs-12 col-sm-12">
-            <a class="nav-link nav-item-hovered" href="#">О нас</a>
+            <a class="nav-link {% block select-about %}{% endblock %} nav-item-hovered" href="/about">О нас</a>
           </div>
           <div class="nav-item col-xl-2 col-lg-2 col-md-12 col-xs-12 col-sm-12">
-            <a class="nav-link nev-select nav-item-hovered" href="#">Блог</a>
+            <a class="nav-link {% block select-review %}{% endblock %} nav-item-hovered" href="/review">Отзывы</a>
           </div>
           <div class="nav-item col-xl-2 col-lg-2 col-md-12 col-xs-12 col-sm-12" style="min-width:130px;">
-            <a class="nav-link nav-item-hovered" href="#">Контакты</a>
+            <a class="nav-link {% block select-license %}{% endblock %} nav-item-hovered" href="/license">Лицензия</a>
           </div>
           <div class="nav-item col-xl-4 col-lg-3 col-md-12 col-xs-12 col-sm-12">
             <a class="nav-link header-button button-animate" href="#" value="Оформить заявку"></a>
@@ -130,10 +132,10 @@
       <!-- FOOTER -->
       <footer>
         <div class="col-xl-4 offset-xl-4 col-lg-6 offset-lg-3 row">
-          <a class="col" >Главная</a>
-          <a class="col" >О нас</a>
-          <a class="col" >Блог</a>
-          <a class="col" >Контакты</a>
+          <a href="/" class="col" >Главная</a>
+          <a href="/about" class="col" >О нас</a>
+          <a href="/review" class="col" >Отзывы</a>
+          <a href="/license" class="col" >Лицензия</a>
         </div>
         <p>© 2010-2019 Все права защищены</p>
       </footer>

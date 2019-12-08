@@ -1,13 +1,8 @@
 from django.contrib import admin
-from .models import Compony, Advertising, Review, Notification
+from .models import Compony, Advertising, Notification
 
 
 @admin.register(Compony)
-class PostAdmin(admin.ModelAdmin):
-    pass
-
-
-@admin.register(Review)
 class PostAdmin(admin.ModelAdmin):
     pass
 

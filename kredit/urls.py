@@ -20,6 +20,7 @@ from django.conf import settings
 
 
 urlpatterns = [
+    path('review', include('review.urls')),
     path('', include('post.urls')),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
