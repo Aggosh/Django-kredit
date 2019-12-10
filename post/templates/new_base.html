@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Kredi best</title>
+    <title>{% block title %}{% endblock %}KREDI.BEST</title>
     <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/><link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/new_base.css' %}">
@@ -67,7 +67,7 @@
                   {% for top_five_item in top_five %}
                     {% if top_five_item.title == top_five.0.title %}
                       <div class="col-12">
-                        <div style="mix-width: 170px; max-width: 300px;" class="top-five-item">
+                        <div style="mix-width: 170px; max-width: 900px;" class="top-five-item">
                         {% else %}
                           <div class="col top-five-item">
                           {% endif %}

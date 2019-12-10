@@ -21,6 +21,7 @@ font-family: 'font2127aa6d0680b144a3bd8be9debeba09';
 .review{
   height: 600px;
   overflow-y: scroll;
+  width: 100%;
 }
 
 .review-title{
@@ -77,7 +78,7 @@ font-family: 'font2127aa6d0680b144a3bd8be9debeba09';
 .review-text{
   margin-top: 20px;
   margin-bottom: 20px;
-  padding-left: 20px;
+  padding-left: 25px;
   font-family: HelveticaNeueCyr-Light;
   font-size: 16px;
   font-weight: 300;

@@ -28,8 +28,9 @@ font-family: 'font7ac1c8f0b974a943aa67859c07f86bd2';
         margin-right:0px!important; }
   .nav-bar-item { padding-left: 0px; padding-right: 0px; }
   .nav-item-hovered:hover{
-  color:white!important;
-}}
+  color:white!important; }
+  main{ min-height: 678px!important; }
+}
 
 @media (min-width: 992px) { 
   main { margin-top: 70px; }
@@ -170,6 +171,7 @@ p{
 }
 
 main{
+  min-height: 608px;
 }
 
 .horizontalline-left{

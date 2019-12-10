@@ -3,9 +3,13 @@ from .base_context import make_base_context
 
 
 def license(request):
-    cont = make_base_context()
 
-    return render(request, 'license.html', context=cont)
+    return render(request, 'license.html')
+
+
+def about(request):
+
+    return render(request, 'about.html')
 
 
 def new(request):
