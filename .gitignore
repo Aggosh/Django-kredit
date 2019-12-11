@@ -1,7 +1,7 @@
 # Created by https://www.gitignore.io
 
 #media
-.png
+*.png
 
 #JS
 node_modules
@@ -39,6 +39,8 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+settings.py
+media/
 .Python
 env/
 build/
