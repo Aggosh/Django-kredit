@@ -39,8 +39,6 @@ __pycache__/
 *.so
 
 # Distribution / packaging
-settings.py
-media/
 .Python
 env/
 build/
@@ -92,6 +90,9 @@ target/
 *.pyc
 __pycache__/
 local_settings.py
+
+settings.py
+media/
 
 .env
 db.sqlite3
