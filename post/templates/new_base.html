@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,10 +9,32 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/new_base.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154426177-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-154426177-1');
+    </script>
+
+    <!-- Smartsupp Live Chat script -->
+    <script type="text/javascript">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = '7bd045adc5599adadc2c24186b65970804e047e5';
+    window.smartsupp||(function(d) {
+    var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+    s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+    c.type='text/javascript';c.charset='utf-8';c.async=true;
+    c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+    })(document);
+    </script>
+
     <script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
     <script src="{% static 'js/new_base.js' %}"></script>
     {% block head %}
     {% endblock %}
@@ -73,7 +95,7 @@
                           {% endif %}
                           <div>
                             <a href="{{ top_five_item.ref_url }}" target="_blank">
-                            <img src="/media/{{ top_five_item.main_photo }}"></a>
+                            <img src="/media/{{ top_five_item.main_photo }} " alt="{{ compony.raiting }}"></a>
                             <span class="stars" data-stars={{ compony.raiting }}>XXXXX</span>
                             <p>{{ top_five_item.reviews_count }} отзывов</p>
                           </div>
@@ -99,25 +121,25 @@
                 <div class="col-xl-3 col-lg-4 compony">
                   <div class="compony-content">
                     <div class="compony-header">
-                      <a href="{{ compony.ref_url }}"><img src="/media/{{ compony.main_photo }}"></a>
+                      <a href="{{ compony.ref_url }}"><img src="/media/{{ compony.main_photo }}" alt="{{ compony.title }}"></a>
                       <span class="stars" data-stars={{ compony.raiting }}>XXXXX</span>
                     </div>
                     <div class="compony-parameters">
                       <div>
                         <p>Сумма, (грн.)</p>
-                        <p class="compony-parameters-colored-text" href>до {{ compony.amount }}</p>
+                        <p class="compony-parameters-colored-text">до {{ compony.amount }}</p>
                       </div>
                       <div>
                         <p>Срок, (дн.)</p>
-                        <p class="compony-parameters-colored-text" href>{{ compony.term }}</p>
+                        <p class="compony-parameters-colored-text">{{ compony.term }}</p>
                       </div>
                       <div>
                         <p>Рассмотрение</p>
-                        <p class="compony-parameters-colored-text" href>{{ compony.review_time }} минут</p>
+                        <p class="compony-parameters-colored-text">{{ compony.review_time }} минут</p>
                       </div>
                       <div>
                         <p>% одобрения</p>
-                        <p class="compony-parameters-colored-text" href>{{ compony.approval_percent }}%</p>
+                        <p class="compony-parameters-colored-text">{{ compony.approval_percent }}%</p>
                       </div>
                       <p class="compony-parameters-addition">{{ compony.addition }}</p>
                       <a class="compony-button button-animate" href="{{ compony.ref_url }}" value="ОФОРМИТЬ"></a>
