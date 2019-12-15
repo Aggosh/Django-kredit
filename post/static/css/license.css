@@ -24,6 +24,17 @@ font-family: 'font7ac1c8f0b974a943aa67859c07f86bd2';
   color: #2c3e50;
 }
 
+.license h2{
+  font-family: HelveticaNeueCyr-Bold;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #2c3e50;
+}
+
 .license p {
   font-family: HelveticaNeueCyr-Light;
   font-size: 20px;
