@@ -2,9 +2,22 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{% block title %}{% endblock %}KREDI.BEST</title>
+    <!-- SEO -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+    <meta name="description" content="KREDI.BEST сервис подбора выгодного займа онлайн без отказа Круглосуточно, без справок и проверок от 0% ставка моментальная выдача на карту или наличными."> 
+    <meta name="title" content="Займ онлайн на карту мгновенно Украина | KREDI.BEST">
+    <meta property="og:url" content="kredi.best">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Займ онлайн на карту мгновенно Украина | KREDI.BEST">
+    <meta property="og:description" content="KREDI.BEST сервис подбора выгодного займа онлайн без отказа Круглосуточно, без справок и проверок от 0% ставка моментальная выдача на карту или наличными.">
+    <meta property="og:image" content="{% static 'favicon.ico' %}">
+    <meta property="og:site_name" content="kredi.best">
+    <meta property="og:locale" content="ru_RU">
+     <!-- title -->
+    <title>{% block title %}{% endblock %}Займ онлайн на карту мгновенно Украина | KREDI.BEST</title>
     <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/><link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/new_base.css' %}">
@@ -91,13 +104,13 @@
             <div class="col-xl-6 col-lg-6">
               <div class="top-five">
                 <div class="col-xl-12 top-five-notification-text">
-                  <p>Топ <a style="color: #e67e22;">5</a> компаний</p>
+                  <h1>Топ <a style="color: #e67e22;">5</a> компаний</h1>
                 </div>
                 <div style="margin-right: 0px; margin-left: 0px;" class="row">
                   {% for top_five_item in top_five %}
                     {% if top_five_item.title == top_five.0.title %}
                       <div class="col-12">
-                        <div class="top-five-item">
+                        <div style="max-width: 900px!important" class="top-five-item">
                         {% else %}
                           <div class="col top-five-item">
                           {% endif %}
