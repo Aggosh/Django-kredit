@@ -3,7 +3,10 @@
 {% block head %}
     <link rel="stylesheet" href="{% static 'css/review.css' %}">
 {% endblock %}
+{% block description %}"Отзывы о KREDI.BEST, мы онлайн сервис подбора кредитов и займов на вашу банковскую карту в Украине, без справок и поручителей, без процентов, под 0% в месяц, выдача моментальная на наличными или на карту 24 часа в сутки без отказа."{% endblock %}
+{% block ogdescription %}"Отзывы о KREDI.BEST, мы онлайн сервис подбора кредитов и займов на вашу банковскую карту в Украине, без справок и поручителей, без процентов, под 0% в месяц, выдача моментальная на наличными или на карту 24 часа в сутки без отказа."{% endblock %}
 {% block title %}Отзывы {% endblock %}
+{% block ogtitle %}Отзывы {% endblock %}
 {% block select-review %}
 nev-select
 {% endblock %}
@@ -15,14 +18,14 @@ nev-select
             </div>
             <div class="review">
                 {% for review in reviews %}
-                    <div class="review-item row">
+                    <div class="review-item row" itemscope itemtype="http://schema.org/Review">
                         <div class="col-2">
-                            <p class="review-name">{{ review.name }}</p>
+                            <p itemprop="author" class="review-name">{{ review.name }}</p>
                             <a href="{{ review.company_name.ref_url }}"><img src="/media/{{ review.company_name.main_photo }}" alt="{{ review.name }}"></a>
-                            <span class="stars" data-stars={{ review.company_rating }}>XXXXX</span>
+                            <span itemprop="reviewRating" class="stars" data-stars={{ review.company_rating }}>XXXXX</span>
                         </div>
                         <div class="col-10">
-                            <p class="review-text">{{ review.text }}</p>
+                            <p itemprop="reviewBody" class="review-text">{{ review.text }}</p>
                         </div>
                         <div class="col-12">
                             <p class="review-time">{{ review.time|date:"j.n.Y" }}</p>
