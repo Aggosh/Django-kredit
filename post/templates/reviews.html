@@ -21,7 +21,7 @@ nev-select
                     <div class="review-item row" itemscope itemtype="http://schema.org/Review">
                         <div class="col-2">
                             <p itemprop="author" class="review-name">{{ review.name }}</p>
-                            <a href="{{ review.company_name.ref_url }}"><img src="/media/{{ review.company_name.main_photo }}" alt="{{ review.name }}"></a>
+                            <a href="/redirect/{{ review.company_name.redirect_ref_url }}"><img src="/media/{{ review.company_name.main_photo }}" alt="{{ review.name }}"></a>
                             <span itemprop="reviewRating" class="stars" data-stars={{ review.company_rating }}>XXXXX</span>
                         </div>
                         <div class="col-10">

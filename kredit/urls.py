@@ -22,5 +22,9 @@ from django.conf import settings
 urlpatterns = [
     path('review', include('review.urls')),
     path('', include('post.urls')),
+    path('redirect/', include('redir.urls')),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler404 = 'post.views.error_404_view'
+handler500 = 'post.views.error_500_view'

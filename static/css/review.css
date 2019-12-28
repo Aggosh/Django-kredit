@@ -1,0 +1,208 @@
+@font-face {
+font-family: 'font7ac1c8f0b974a943aa67859c07f86bd2';
+    
+    src:    url('https://nomail.com.ua/files/eot/7ac1c8f0b974a943aa67859c07f86bd2.eot?#iefix') format('embedded-opentype'),
+            url('https://nomail.com.ua/files/woff/7ac1c8f0b974a943aa67859c07f86bd2.woff') format('woff'),
+            url('https://nomail.com.ua/files/woff2/7ac1c8f0b974a943aa67859c07f86bd2.woff2') format('woff2');
+}
+
+@font-face { font-family: 'HelveticaNeueCyr-Bold';  src: local('HelveticaNeueCyr-Bold'), url('https://nomail.com.ua/files/woff/7ac1c8f0b974a943aa67859c07f86bd2.woff') format('woff'); }
+
+@font-face {
+font-family: 'font2127aa6d0680b144a3bd8be9debeba09';
+    
+    src:    url('https://nomail.com.ua/files/eot/2127aa6d0680b144a3bd8be9debeba09.eot?#iefix') format('embedded-opentype'),
+            url('https://nomail.com.ua/files/woff/2127aa6d0680b144a3bd8be9debeba09.woff') format('woff'),
+            url('https://nomail.com.ua/files/woff2/2127aa6d0680b144a3bd8be9debeba09.woff2') format('woff2');
+}
+
+@font-face { font-family: 'HelveticaNeueCyr-Light';  src: local('HelveticaNeueCyr-Light'), url('https://nomail.com.ua/files/woff/2127aa6d0680b144a3bd8be9debeba09.woff') format('woff'); }
+
+.review{
+  height: 600px;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+.review-title{
+  width: 100%;
+}
+
+.review-title h1{
+  text-align: center;
+  font-family: HelveticaNeueCyr-Bold;
+  font-size: 43px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.review-item img{
+  width: 80px;
+  height: 80px;
+}
+
+.review-item span{
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.review-item{
+  width: 95%;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #f3f2f2;
+  margin: 15px;
+  text-align: center;
+}
+
+.review-name{
+  text-align: center;
+  font-family: HelveticaNeueCyr-Light;
+  font-size: 26px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  color: #e67e22;
+  margin-top: 17px;
+  min-width: 80px;
+  overflow: scroll;
+}
+
+.review-text{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 55px;
+  font-family: HelveticaNeueCyr-Light;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.31;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+}
+
+.review-time{
+  float: right;
+  margin-bottom: 10px;
+  font-family: HelveticaNeueCyr-Light;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.31;
+  letter-spacing: normal;
+  text-align: right;
+  color: #2c3e50;
+}
+
+.review-form{
+  margin-top: 30px;
+}
+
+.review-form input[type="text"], .review-form input[type="email"], .review-form select, .review-form textarea{
+  border-radius: 11px;
+  border: solid 1px #000000;
+  background-color: #ffffff;
+  margin-top:7px;
+  margin-bottom: 7px;
+  resize: none;
+}
+
+.review-form-email input{
+  placeholder: ;
+}
+
+.review-form-company-rating{
+  width:100%;
+  border-radius: 11px;
+  border: solid 1px #000000;
+  background-color: #ffffff;
+  margin-top:7px;
+  margin-bottom: 7px;
+}
+
+.review-form-company-rating select{
+  margin-left: 5px;
+}
+
+.review-form-company-rating a{
+  font-family: HelveticaNeueCyr-Light;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.31;
+  letter-spacing: normal;
+  text-align: left;
+  color: #a7a7a7;
+}
+
+.review-form-text{
+  width: 100%;
+  height: 85px;
+}
+
+.review-form span{
+  width: 100%;
+}
+
+.review-form-company-name select{
+  width: 100%;
+  min-height: 41px;
+}
+
+
+.review-form-company-name{
+  padding-left: 0px!important;
+  padding-right: 0px!important;
+}
+
+.review-form input[type="submit"]{
+  margin-top:7px;
+  margin-bottom: 7px;
+  border-radius: 11px;
+  border: none;
+  background-color: #e67e22;
+  font-family: HelveticaNeueCyr-Bold;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.31;
+  letter-spacing: normal;
+  color: #ffffff;
+  width:100%;
+  min-height: 34px;
+}
+
+/* width */
+.review::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+.review::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #a7a7a7;
+}
+ 
+/* Handle */
+.review::-webkit-scrollbar-thumb {
+  background: #e67e22; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.review::-webkit-scrollbar-thumb:hover {
+  background: #b5631b; 
+}

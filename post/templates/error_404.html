@@ -1,0 +1,287 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- SEO -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html">
+        <meta name="title" content="Не верный адрес страницы, ошибка 404 KREDI.BEST.">
+        <!-- title -->
+        <title>Не верный адрес страницы, ошибка 404 KREDI.BEST.</title>
+        <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/><link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154426177-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-154426177-1');
+        </script>
+        <!-- Smartsupp Live Chat script -->
+        <script type="text/javascript">
+        var _smartsupp = _smartsupp || {};
+        _smartsupp.key = '7bd045adc5599adadc2c24186b65970804e047e5';
+        window.smartsupp||(function(d) {
+        var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+        s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+        c.type='text/javascript';c.charset='utf-8';c.async=true;
+        c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+        })(document);
+        </script>
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+        <script src="{% static 'js/new_base.js' %}"></script>
+        {% block head %}
+        {% endblock %}
+    </head>
+    <body>
+        <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
+        @import url('https://fonts.googleapis.com/css?family=Catamaran:400,800');
+        .error-container {
+        text-align: center;
+        font-size: 180px;
+        font-family: 'Catamaran', sans-serif;
+        font-weight: 800;
+        margin: 20px 15px;
+        }
+        .error-container > span {
+        display: inline-block;
+        line-height: 0.7;
+        position: relative;
+        color: #FFB485;
+        }
+        .error-container > span {
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        }
+        .error-container > span:nth-of-type(1) {
+        color: #D1F2A5;
+        -webkit-animation: colordancing 4s infinite;
+        animation: colordancing 4s infinite;
+        }
+        .error-container > span:nth-of-type(3) {
+        color: #F56991;
+        -webkit-animation: colordancing2 4s infinite;
+        animation: colordancing2 4s infinite;
+        }
+        .error-container > span:nth-of-type(2) {
+        width: 120px;
+        height: 120px;
+        border-radius: 999px;
+        }
+        .error-container > span:nth-of-type(2):before,
+        .error-container > span:nth-of-type(2):after {
+        border-radius: 0%;
+        content:"";
+        position: absolute;
+        top: 0; left: 0;
+        width: inherit; height: inherit;
+        border-radius: 999px;
+        box-shadow: inset 30px 0 0 rgba(209, 242, 165, 0.4),
+        inset 0 30px 0 rgba(239, 250, 180, 0.4),
+        inset -30px 0 0 rgba(255, 196, 140, 0.4),
+        inset 0 -30px 0 rgba(245, 105, 145, 0.4);
+        -webkit-animation: shadowsdancing 4s infinite;
+        animation: shadowsdancing 4s infinite;
+        }
+        .error-container > span:nth-of-type(2):before {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        }
+        .screen-reader-text {
+        position: absolute;
+        top: -9999em;
+        left: -9999em;
+        }
+        @-webkit-keyframes shadowsdancing {
+        0% {
+        box-shadow: inset 30px 0 0 rgba(209, 242, 165, 0.4),
+        inset 0 30px 0 rgba(239, 250, 180, 0.4),
+        inset -30px 0 0 rgba(255, 196, 140, 0.4),
+        inset 0 -30px 0 rgba(245, 105, 145, 0.4);
+        }
+        25% {
+        box-shadow: inset 30px 0 0 rgba(245, 105, 145, 0.4),
+        inset 0 30px 0 rgba(209, 242, 165, 0.4),
+        inset -30px 0 0 rgba(239, 250, 180, 0.4),
+        inset 0 -30px 0 rgba(255, 196, 140, 0.4);
+        }
+        50% {
+        box-shadow: inset 30px 0 0 rgba(255, 196, 140, 0.4),
+        inset 0 30px 0 rgba(245, 105, 145, 0.4),
+        inset -30px 0 0 rgba(209, 242, 165, 0.4),
+        inset 0 -30px 0 rgba(239, 250, 180, 0.4);
+        }
+        75% {
+        box-shadow: inset 30px 0 0 rgba(239, 250, 180, 0.4),
+        inset 0 30px 0 rgba(255, 196, 140, 0.4),
+        inset -30px 0 0 rgba(245, 105, 145, 0.4),
+        inset 0 -30px 0 rgba(209, 242, 165, 0.4);
+        }
+        100% {
+        box-shadow: inset 30px 0 0 rgba(209, 242, 165, 0.4),
+        inset 0 30px 0 rgba(239, 250, 180, 0.4),
+        inset -30px 0 0 rgba(255, 196, 140, 0.4),
+        inset 0 -30px 0 rgba(245, 105, 145, 0.4);
+        }
+        }
+        @keyframes shadowsdancing {
+        0% {
+        box-shadow: inset 30px 0 0 rgba(209, 242, 165, 0.4),
+        inset 0 30px 0 rgba(239, 250, 180, 0.4),
+        inset -30px 0 0 rgba(255, 196, 140, 0.4),
+        inset 0 -30px 0 rgba(245, 105, 145, 0.4);
+        }
+        25% {
+        box-shadow: inset 30px 0 0 rgba(245, 105, 145, 0.4),
+        inset 0 30px 0 rgba(209, 242, 165, 0.4),
+        inset -30px 0 0 rgba(239, 250, 180, 0.4),
+        inset 0 -30px 0 rgba(255, 196, 140, 0.4);
+        }
+        50% {
+        box-shadow: inset 30px 0 0 rgba(255, 196, 140, 0.4),
+        inset 0 30px 0 rgba(245, 105, 145, 0.4),
+        inset -30px 0 0 rgba(209, 242, 165, 0.4),
+        inset 0 -30px 0 rgba(239, 250, 180, 0.4);
+        }
+        75% {
+        box-shadow: inset 30px 0 0 rgba(239, 250, 180, 0.4),
+        inset 0 30px 0 rgba(255, 196, 140, 0.4),
+        inset -30px 0 0 rgba(245, 105, 145, 0.4),
+        inset 0 -30px 0 rgba(209, 242, 165, 0.4);
+        }
+        100% {
+        box-shadow: inset 30px 0 0 rgba(209, 242, 165, 0.4),
+        inset 0 30px 0 rgba(239, 250, 180, 0.4),
+        inset -30px 0 0 rgba(255, 196, 140, 0.4),
+        inset 0 -30px 0 rgba(245, 105, 145, 0.4);
+        }
+        }
+        @-webkit-keyframes colordancing {
+        0% {
+        color: #D1F2A5;
+        }
+        25% {
+        color: #F56991;
+        }
+        50% {
+        color: #FFC48C;
+        }
+        75% {
+        color: #EFFAB4;
+        }
+        100% {
+        color: #D1F2A5;
+        }
+        }
+        @keyframes colordancing {
+        0% {
+        color: #D1F2A5;
+        }
+        25% {
+        color: #F56991;
+        }
+        50% {
+        color: #FFC48C;
+        }
+        75% {
+        color: #EFFAB4;
+        }
+        100% {
+        color: #D1F2A5;
+        }
+        }
+        @-webkit-keyframes colordancing2 {
+        0% {
+        color: #FFC48C;
+        }
+        25% {
+        color: #EFFAB4;
+        }
+        50% {
+        color: #D1F2A5;
+        }
+        75% {
+        color: #F56991;
+        }
+        100% {
+        color: #FFC48C;
+        }
+        }
+        @keyframes colordancing2 {
+        0% {
+        color: #FFC48C;
+        }
+        25% {
+        color: #EFFAB4;
+        }
+        50% {
+        color: #D1F2A5;
+        }
+        75% {
+        color: #F56991;
+        }
+        100% {
+        color: #FFC48C;
+        }
+        }
+        /* demo stuff */
+        * {
+        box-sizing: border-box;
+        }
+        body {
+        background-color: #416475;
+        margin-bottom: 50px;
+        }
+        html, button, input, select, textarea {
+        font-family: 'Montserrat', Helvetica, sans-serif;
+        color: #2c3e50;
+        }
+        h1 {
+        text-align: center;
+        margin: 30px 15px;
+        }
+        .zoom-area {
+        max-width: 490px;
+        margin: 30px auto 30px;
+        font-size: 19px;
+        text-align: center;
+        }
+        .link-container {
+        text-align: center;
+        }
+        a.more-link {
+        text-transform: uppercase;
+        font-size: 13px;
+        background-color: #2c3e50;
+        padding: 10px 15px;
+        border-radius: 0;
+        color: white;
+        display: inline-block;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        line-height: 1.5;
+        text-decoration: none;
+        margin-top: 50px;
+        letter-spacing: 1px;
+        }
+        </style>
+        <h1 style="color: white;">Страница не найдена</h1>
+        <section class="error-container">
+            <span>4</span>
+            <span><span class="screen-reader-text">0</span></span>
+            <span>4</span>
+        </section>
+        <div class="link-container">
+            <a target="_blank" href="/" class="more-link">Вернуться на главную</a>
+        </div>
+    </body>
+</html>

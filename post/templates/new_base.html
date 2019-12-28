@@ -17,7 +17,7 @@
     <meta property="og:image" content="https://kredi.best/{% static 'favicon.ico' %}">
     <meta property="og:site_name" content="kredi.best">
     <meta property="og:locale" content="ru_RU">
-    <meta name="Keywords" content="кредит онлайн на карту без відмов, кредит онлайн терміново на картку, взять кредит онлайн на карточку украина, кредит онлайн без поручителей, кредит онлайн без процентов, быстрый онлайн кредит, кредит онлайн на карту круглосуточно украина без отказа, быстрый займ онлайн на карту украина, быстрый кредит без справки доходах, онлайн займ на карту 24 часа, займ онлайн без звонков, онлайн кредит на карту без отказа украина круглосуточно с плохой кредитной историей, деньги в долг до зарплаты, деньги до зарплаты на карту онлайн украина, кредит в киеве без справки о доходах и залога, кредит на месяц без процентов, кредит с плохой кредитной историей и просрочками безработным"> 
+    <meta name="Keywords" content="кредит онлайн, займ на карту, помощь в получении кредита, онлайн займ, онлайн кредит, микрозаймы, займы на карту, где взять денег, кредит онлайн на карту, микрозайм онлайн, онлайн займы, деньги до зарплаты, онлайн займ на карту, микрозайм на карту, быстрый займ, онлайн заявка на кредит, займ на карту онлайн, быстро деньгикредит онлайн на карту без відмов, кредит онлайн терміново на картку, взять кредит онлайн на карточку украина, кредит онлайн без поручителей, кредит онлайн без процентов, быстрый онлайн кредит, кредит онлайн на карту круглосуточно украина без отказа, быстрый займ онлайн на карту украина, быстрый кредит без справки доходах, онлайн займ на карту 24 часа, займ онлайн без звонков, онлайн кредит на карту без отказа украина круглосуточно с плохой кредитной историей, деньги в долг до зарплаты, деньги до зарплаты на карту онлайн украина, кредит в киеве без справки о доходах и залога, кредит на месяц без процентов, кредит с плохой кредитной историей и просрочками безработным"> 
      <!-- title -->
     <title>{% block title %}{% endblock %}Займ онлайн на карту мгновенно Украина | KREDI.BEST</title>
     <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/><link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
@@ -64,7 +64,7 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <!-- BOOTSTRAP -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- HEADER -->
@@ -79,8 +79,8 @@
           <div class="verticalLine nav-item d-none d-xl-block col-1"></div>
           <div class="nav-item col-xl-4 nav-number">
             <div class="nav-counter nav-item" href="#">
-              <p class="nav-counter-number">50 000</p>
-              <p class="nav-counter-text">человек уже взяли кредит</p>
+              <p class="nav-counter-number">2 342</p>
+              <p class="nav-counter-text">человека уже взяли займ</p>
             </div>
           </div>
           <div class="nav-item col-xl-2 col-lg-2 col-md-12 col-xs-12 col-sm-12">
@@ -93,7 +93,7 @@
             <a class="nav-link {% block select-license %}{% endblock %} nav-item-hovered" href="/license" title="Лицензия">Лицензия</a>
           </div>
           <div class="nav-item col-xl-4 col-lg-3 col-md-12 col-xs-12 col-sm-12">
-            <a href="https://rdr.salesdoubler.com.ua/in/offer/1436?aid=23673" class="nav-link header-button button-animate" href="#" value="Оформить заявку" title="Лучший заемщик"></a>
+            <a href="/redirect/Dinero" class="nav-link header-button button-animate" href="#" value="Оформить заявку" title="Лучший заемщик"></a>
           </div>
         </div>
       </div>
@@ -117,7 +117,7 @@
                           <div class="col top-five-item"itemscope itemtype="http://schema.org/Offer">
                           {% endif %}
                           <div>
-                            <a href="{{ top_five_item.ref_url }}" target="_blank" title="{{ top_five_item.title }}">
+                            <a href="/redirect/{{ top_five_item.redirect_ref_url }}" target="_blank" title="{{ top_five_item.title }}">
                             <img src="/media/{{ top_five_item.main_photo }}" alt="{{ top_five_item.title }}"></a>
                             <span class="stars" data-stars={{ compony.raiting }}>XXXXX</span>
                             <p>{{ top_five_item.reviews_count }} отзывов</p>
@@ -144,7 +144,7 @@
                 <div class="col-xl-3 col-lg-4 compony" itemscope itemtype="http://schema.org/Offer">
                   <div class="compony-content">
                     <div class="compony-header">
-                      <a href="{{ compony.ref_url }}" title="{{ compony.title }}"><img src="/media/{{ compony.main_photo }}" alt="{{ compony.title }}" itemprop="image"></a>
+                      <a href="/redirect/{{ compony.redirect_ref_url }}" title="{{ compony.title }}"><img src="/media/{{ compony.main_photo }}" alt="{{ compony.title }}" itemprop="image"></a>
                       <span class="stars" data-stars={{ compony.raiting }}>XXXXX</span>
                     </div>
                     <div class="compony-parameters">
@@ -165,7 +165,7 @@
                         <p class="compony-parameters-colored-text">{{ compony.approval_percent }}%</p>
                       </div>
                       <p itemprop="addOn" class="compony-parameters-addition">{{ compony.addition }}</p>
-                      <a itemprop="url" class="compony-button button-animate" href="{{ compony.ref_url }}" value="ОФОРМИТЬ" title="{{ compony.title }}"></a>
+                      <a itemprop="url" class="compony-button button-animate" href="/redirect/{{ compony.redirect_ref_url }}" value="ОФОРМИТЬ" title="{{ compony.title }}"></a>
                     </div>
                   </div>
                 </div>
@@ -181,6 +181,7 @@
           <a href="/about" class="col" title="О нас">О нас</a>
           <a href="/review" class="col" title="Отзывы">Отзывы</a>
           <a href="/license" class="col" title="Лицензия">Лицензия</a>
+          <a href="/question" class="col" title="Частые вопросы">Частые вопросы</a>
         </div>
         <p>Домашняя страница kredi.best не является кредитором и не выдает кредиты.У всех кредиторов, которым приведено сравнение, есть соответствующая лицензия кредитного учреждения.</p>
         <p>Наш телефон: +38 050 74 39 089 (Viber)</p>

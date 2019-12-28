@@ -1,0 +1,47 @@
+@font-face {
+font-family: 'font7ac1c8f0b974a943aa67859c07f86bd2';
+    
+    src:    url('https://nomail.com.ua/files/eot/7ac1c8f0b974a943aa67859c07f86bd2.eot?#iefix') format('embedded-opentype'),
+            url('https://nomail.com.ua/files/woff/7ac1c8f0b974a943aa67859c07f86bd2.woff') format('woff'),
+            url('https://nomail.com.ua/files/woff2/7ac1c8f0b974a943aa67859c07f86bd2.woff2') format('woff2');
+}
+
+@font-face { font-family: 'HelveticaNeueCyr-Bold';  src: local('HelveticaNeueCyr-Bold'), url('https://nomail.com.ua/files/woff/7ac1c8f0b974a943aa67859c07f86bd2.woff') format('woff'); }
+
+.license-title{
+  width: 100%;
+}
+
+.license-title h1{
+  font-family: HelveticaNeueCyr-Bold;
+  font-size: 43px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.license h2{
+  font-family: HelveticaNeueCyr-Bold;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #2c3e50;
+}
+
+.license p {
+  font-family: HelveticaNeueCyr-Light;
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #2c3e50;
+}
